@@ -1,0 +1,25 @@
+@import "../../../style/theme-variables.scss";
+
+.wraper-betting-cancel,
+.wrapper-deposit-message,
+.wraper-setting {
+  padding: 20px;
+  border-radius: 20px;
+  @include themify($themes) {
+    background: themed("formBackground");
+    span {
+      color: themed("textColor");
+    }
+  }
+}
+
+.wrapper-deposit-message-item {
+  padding: 20px;
+  border-radius: 20px;
+  @include themify($themes) {
+    background: themed("contentBg");
+    span {
+      color: themed("textColor");
+    }
+  }
+}

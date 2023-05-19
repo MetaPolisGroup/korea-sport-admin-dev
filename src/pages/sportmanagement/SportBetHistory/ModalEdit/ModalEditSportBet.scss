@@ -1,0 +1,107 @@
+.edit-sport-bet {
+  .ant-modal-content {
+    padding: unset;
+
+    h3 {
+      padding: 15px;
+    }
+
+    .content {
+      padding: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      row-gap: 12px;
+      border-top: 1px solid rgba(120, 130, 140, 0.13);
+
+      & > div {
+        width: 38%;
+
+        .ant-form-item {
+          margin-bottom: unset;
+        }
+
+        .ant-picker {
+          width: 100%;
+        }
+      }
+
+      .title {
+        width: 22%;
+      }
+
+      .score {
+        width: 77%;
+      }
+
+      .ant-table-body {
+        & > table {
+          width: 100% !important;
+        }
+      }
+
+      .ant-table-cell {
+        padding: 4px !important;
+        width: 40px !important;
+        min-width: unset !important;
+        max-width: unset !important;
+      }
+
+      .ant-table-footer {
+        display: none;
+      }
+    }
+
+    .footer {
+      padding: 15px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 5px;
+      border-top: 1px solid rgba(120, 130, 140, 0.13);
+
+      button {
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 2px;
+        background-color: unset;
+      }
+
+      .btn {
+        &1 {
+          color: #ffc36d;
+          border: 1px solid #ffc36d;
+
+          &:hover {
+            color: black !important;
+            background-color: #ffc36d;
+          }
+        }
+
+        &2 {
+          color: #ff5050;
+          border: 1px solid #ff5050;
+
+          &:hover {
+            color: white !important;
+            background-color: #ff5050;
+          }
+        }
+
+        &3 {
+          color: #707cd2;
+          border: 1px solid #707cd2;
+
+          &:hover {
+            color: white !important;
+            background-color: #707cd2;
+          }
+        }
+
+        &4 {
+          border: none;
+        }
+      }
+    }
+  }
+}

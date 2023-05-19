@@ -1,0 +1,296 @@
+$light-body-background: var(--light-body-background);
+$light-header-footer: var(--light-header-footer);
+$light-text-color: var(--light-text-color);
+$light-border-color: var(--light-border-color);
+$light-content-background: var(--light-content-background);
+$light-nav-card: var(--light-nav-card);
+$light-background-form: var(--light-form-background);
+$light-background-form-item: var(--light-form-item-background);
+$light-background-button: var(--light-button-background);
+$light-border-item: none;
+$light-nav-text: var(--dark-nav-text);
+
+$dark-nav-text: var(--dark-nav-text);
+$dark-border-item: none;
+$dark-background-button: var(--dark-button-background);
+$dark-background-form-item: var(--dark-form-item-background);
+$dark-background-form: var(--dark-form-background);
+$dark-body-background: var(--dark-body-background);
+$dark-header-footer: var(--dark-header-footer);
+$dark-text-color: var(--dark-text-color);
+$dark-border-color: var(--dark-border-color);
+$dark-content-background: var(--dark-content-background);
+$dark-nav-card: var(--dark-nav-card);
+$dark-background-form: var(--dark-form-background);
+
+$themes: (
+  light: (
+    bodyBackgroundColor: $light-body-background,
+    headerFooterBackground: $light-header-footer,
+    textColor: $light-text-color,
+    borderColor: $light-border-color,
+    contentBg: $light-content-background,
+    navCard: $light-nav-card,
+    formBackground: $light-background-form,
+    formBackgroundItem: $light-background-form-item,
+    bgButton: $light-background-button,
+    borderItem: $light-border-item,
+    navText: $light-nav-text,
+    activeBg: #4096ff,
+    activeText: #ffffff,
+  ),
+  dark: (
+    bodyBackgroundColor: $dark-body-background,
+    headerFooterBackground: $dark-header-footer,
+    textColor: $dark-text-color,
+    borderColor: $dark-border-color,
+    contentBg: $dark-content-background,
+    navCard: $dark-nav-card,
+    formBackground: $dark-background-form,
+    formBackgroundItem: $dark-background-form-item,
+    bgButton: $dark-background-button,
+    borderItem: $dark-border-item,
+    navText: $dark-nav-text,
+    activeBg: #4096ff,
+    activeText: #ffffff,
+  ),
+);
+$theme-map: null;
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Quicksand, ui-serif, Georgia;
+}
+a {
+  color: black;
+}
+
+.theme-dark {
+  background-color: #353846;
+  color: #b2b9bf;
+}
+.theme-light {
+  background-color: #edf1f5;
+  color: black;
+}
+
+.theme-dark > footer {
+  background-color: #31343e;
+  color: #b2b9bf;
+}
+.theme-light > footer {
+  background-color: white;
+  color: black;
+}
+
+.container {
+  padding: 30px;
+  margin: 24px;
+  border-radius: 15px;
+  min-height: calc(100vh - 167px);
+  transition: 0.4s ease-in-out;
+  @include themify($themes) {
+    background: themed("contentBg");
+    span {
+      color: themed("textColor");
+    }
+  }
+}
+
+.container .ant-form-item-control-input-content input,
+.container .ant-select-selector,
+.container .ant-picker,
+.container .ant-input,
+.container .input-editor {
+  @include themify($themes) {
+    background: themed("formBackgroundItem") !important;
+    color: themed("textColor");
+    border: themed("borderItem");
+  }
+}
+
+.container .ant-btn {
+  @include themify($themes) {
+    background: themed("bgButton");
+    transition: 0.2s ease-in-out 0s;
+    border: themed("borderItem");
+    color: #ffffff;
+  }
+
+  span {
+    color: #ffffff !important;
+  }
+}
+
+.container .ant-btn:hover {
+  transform: scale(1.1);
+}
+
+.container,
+.ant-form-item,
+span,
+label,
+p {
+  @include themify($themes) {
+    color: themed("textColor") !important;
+    font-weight: 200;
+  }
+}
+.container,
+.ant-form-item,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include themify($themes) {
+    color: themed("textColor") !important;
+    font-weight: 500;
+    font-family: "Raleway", ui-serif, Georgia;
+  }
+}
+.nav-wrapper svg,
+p {
+  @include themify($themes) {
+    color: themed("navText");
+    font-weight: 400;
+  }
+}
+.container .ql-container {
+  min-height: 200px;
+}
+.container {
+  overflow-y: auto;
+}
+
+.container .ant-form-item {
+  margin: 0;
+  padding: 0;
+}
+
+.container::-webkit-scrollbar {
+  width: 7px;
+  background: #fff;
+  padding-right: 1px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.container .active {
+  @include themify($themes) {
+    background-color: themed("activeBg");
+    color: themed("activeText");
+    font-weight: 400;
+  }
+}
+
+.container .ant-pagination {
+  display: flex;
+  justify-content: end;
+}
+
+.container .ant-table-column-sorter-inner span {
+  @include themify($themes) {
+    background-color: transparent;
+  }
+}
+
+p > img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+ul {
+  padding-inline-start: calc(var(--spacing) * 2);
+  margin-block-end: var(--spacing);
+}
+
+/* antd customized */
+.ant-table-thead > tr > th {
+  white-space: nowrap;
+}
+
+.ant-card-head-title {
+  padding: calc(var(--spacing-xs) * 2) 0;
+}
+
+/* React quills */
+.ql-snow .ql-picker.ql-size .ql-picker-label::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item::before {
+  content: attr(data-value) !important;
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-label:not([data-value])::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item:not([data-value])::before {
+  content: "14px" !important;
+}
+
+.ql-snow .ql-picker.ql-expanded .ql-picker-options {
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.ql-snow.ql-toolbar {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.ql-snow.ql-container {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.ql-snow.ql-toolbar,
+.ql-snow.ql-container {
+  transition: all 0.2s;
+}
+
+.ant-form-item-control-input-content:hover > .ql-snow.ql-toolbar,
+.ant-form-item-control-input-content:focus > .ql-snow.ql-toolbar,
+.ant-form-item-control-input-content:focus > .ql-snow.ql-container,
+.ant-form-item-control-input-content:hover > .ql-snow.ql-container {
+  border-color: #4096ff;
+  box-shadow: 0 0 0 2px rgb(5 145 255 / 10%);
+  border-inline-end-width: 1px;
+  outline: 0;
+}

@@ -1,0 +1,40 @@
+.partner-deposit {
+  &__header {
+    margin-bottom: 15px;
+
+    h3,
+    p {
+      margin-bottom: 10px;
+    }
+
+    .box-filter {
+      display: flex;
+      gap: 25px;
+    }
+  }
+
+  &__content {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    row-gap: 20px;
+
+    .box-btn {
+      display: flex;
+      gap: 10px;
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .box-table {
+      width: 100%;
+    }
+  }
+}

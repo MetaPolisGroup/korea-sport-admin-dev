@@ -1,0 +1,46 @@
+@import "../../../style/theme-variables.scss";
+
+.nav-wrapper {
+  background-color: #2f323e;
+  color: #83848b;
+  display: flex;
+  cursor: pointer;
+
+  & > .ant-space {
+    padding: 15px;
+  }
+
+  & > .active {
+    background-color: #ff5050;
+    color: white !important;
+
+    svg,
+    p {
+      color: white !important;
+    }
+  }
+}
+
+.custom-menu-item {
+  border-radius: initial !important;
+  background-color: #2f323e !important;
+}
+
+.custom-menu-item li {
+  color: #83848b !important;
+  padding: 10px 25px !important;
+}
+
+.custom-menu-item li:hover {
+  color: white !important;
+  background-color: #54586a !important;
+}
+
+.nav-wrapper a {
+  color: #83848b;
+  cursor: pointer;
+}
+
+.nav-wrapper .ant-space:hover {
+  color: #ffff;
+}

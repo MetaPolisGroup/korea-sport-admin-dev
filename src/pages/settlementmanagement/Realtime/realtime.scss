@@ -1,0 +1,22 @@
+.Real-time {
+  width: 100%;
+  // overflow: hidden;
+
+  &__header {
+    margin-bottom: 12px;
+
+    h3,
+    p {
+      margin-bottom: 10px;
+    }
+
+    .filter-date {
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  &__content {
+    padding: 10px;
+  }
+}

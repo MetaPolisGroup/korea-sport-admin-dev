@@ -1,0 +1,57 @@
+.bet-statistics {
+  &__header {
+    margin-bottom: 12px;
+
+    h3,
+    p {
+      margin-bottom: 10px;
+    }
+
+    .box-filter {
+      display: flex;
+      gap: 25px;
+
+      input {
+        width: 120px !important;
+      }
+
+      .ant-select {
+        width: 150px;
+      }
+    }
+  }
+
+  &__content {
+    padding: 10px;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+
+      .box-btn {
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+      }
+
+      & > div:last-child {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+
+    .ant-table-cell {
+      text-align: center !important;
+    }
+
+    .red {
+      color: #cc0066 !important;
+    }
+
+    .blue {
+      color: #2cabe3 !important;
+    }
+  }
+}

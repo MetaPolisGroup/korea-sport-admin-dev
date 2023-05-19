@@ -1,0 +1,20 @@
+@import "../../../style/theme-variables.scss";
+
+.nav-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 0.8rem;
+  justify-content: center;
+  width: 120px;
+  max-height: 67px;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: 0.4s ease-in-out;
+
+  @include themify($themes) {
+    background: themed("navCard");
+  }
+}

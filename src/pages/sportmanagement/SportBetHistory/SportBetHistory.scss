@@ -1,0 +1,187 @@
+.sport-bet-his {
+  &__header {
+    margin-bottom: 12px;
+
+    h3,
+    p {
+      margin-bottom: 10px;
+    }
+
+    .box-filter {
+      display: flex;
+      gap: 25px;
+
+      input {
+        width: 120px !important;
+      }
+
+      .ant-select {
+        width: 150px;
+      }
+    }
+  }
+
+  &__content {
+    padding: 10px;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+
+      .box-btn {
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+      }
+
+      & > div:last-child {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+
+    .Waiting {
+      padding: 6px;
+      border-radius: 2px;
+      background: #8898aa;
+      color: white !important;
+    }
+
+    .Win {
+      padding: 6px;
+      border-radius: 2px;
+      background: #23a665;
+      color: white !important;
+    }
+
+    .Lose {
+      padding: 6px;
+      border-radius: 2px;
+      background: #916867;
+      color: white !important;
+    }
+
+    .Cancel {
+      padding: 6px;
+      border-radius: 2px;
+      background: #b43a33;
+      color: white !important;
+    }
+
+    .profile {
+      span {
+        color: black !important;
+      }
+
+      & > span:nth-child(1) {
+        padding: 5px;
+        border-radius: 50px;
+        cursor: pointer;
+        background-color: #f7fafc;
+        box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
+          0 1px 3px rgba(0, 0, 0, 0.08);
+      }
+
+      & > span:nth-child(3),
+      & > span:nth-child(5) {
+        color: #2cabe3 !important;
+        font-weight: bold;
+      }
+
+      & > span:nth-child(4) {
+        color: #cc0066 !important;
+        font-weight: bold;
+      }
+    }
+
+    .betting-table {
+      .ant-table-body {
+        overflow: unset !important;
+      }
+
+      .setting {
+        & > button:first-child {
+          cursor: pointer;
+          padding: 4px;
+          color: #2cd07e;
+          border-radius: 4px;
+          background-color: unset;
+          border: 1px solid #2cd07e;
+          margin-right: 5px;
+
+          &:hover {
+            color: white;
+            background-color: #2cd07e;
+          }
+        }
+
+        & > button:last-child {
+          cursor: pointer;
+          padding: 4px;
+          color: #ffc36d;
+          border-radius: 4px;
+          background-color: unset;
+          border: 1px solid #ffc36d;
+
+          &:hover {
+            color: white;
+            background-color: #ffc36d;
+          }
+        }
+      }
+
+      .progress {
+        svg {
+          padding: 2px;
+          color: black;
+          cursor: pointer;
+          font-size: 18px;
+          border-radius: 4px;
+          background-color: #ffc36d;
+
+          &:hover {
+            background-color: #ffb347;
+          }
+        }
+      }
+
+      .ant-table {
+        & > .ant-table-footer {
+          display: none;
+        }
+      }
+
+      &__footer {
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        background-color: floralwhite;
+        font-size: 20px;
+
+        & > div:last-child {
+          span {
+            font-weight: bold;
+          }
+
+          & > span:nth-child(1) {
+            color: #2cabe3 !important;
+          }
+
+          & > span:nth-child(2) {
+            color: #ff5050 !important;
+          }
+
+          & > span:nth-child(3) {
+            color: #3bf581 !important;
+          }
+
+          & > span:nth-child(4) {
+            color: #f59c1a !important;
+          }
+        }
+      }
+    }
+  }
+}

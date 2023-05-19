@@ -1,0 +1,151 @@
+.message {
+  &__header {
+    h2 {
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+
+  &__content {
+    padding: 12px;
+
+    & > div {
+      margin-top: 12px;
+    }
+
+    .box-btn {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .search {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+
+      input {
+        width: 165px;
+      }
+    }
+  }
+
+  .transmission-type {
+    color: #fff;
+    background-color: #8898aa;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 5px;
+  }
+
+  .Completed,
+  .Waiting,
+  .Now {
+    padding: 5px 10px;
+    width: fit-content;
+    border-radius: 4px;
+  }
+
+  .Completed,
+  .Now {
+    background-color: #2cd07e;
+  }
+
+  .Waiting {
+    background-color: #ffc36d;
+  }
+
+  .setting {
+    display: flex;
+    gap: 5px;
+
+    button {
+      cursor: pointer;
+      border: unset;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .btn {
+      &-edit {
+        color: #fff;
+        background-color: #ffc36d;
+        padding: 5px;
+        border-radius: 5px;
+      }
+
+      &-delete {
+        color: #fff;
+        background-color: #ff5050;
+        padding: 5px;
+        border-radius: 5px;
+        border: unset;
+      }
+    }
+  }
+
+  &-form {
+    width: 900px !important;
+  }
+
+  &-confirm {
+    width: 500px !important;
+  }
+
+  &-modal {
+    .comfirm-delete {
+      text-align: center;
+
+      svg {
+        fill: red;
+        font-size: 80px;
+        margin-bottom: 12px;
+      }
+
+      h4 {
+        font-size: 1.875em;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 1.125em;
+        font-weight: 300;
+        margin-bottom: 12px;
+      }
+
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        button {
+          padding: 6px 12px;
+          height: 38px;
+          font-size: 17px;
+          color: white;
+          border: unset;
+          opacity: 0.8;
+          border-radius: 8px;
+
+          &:first-child {
+            background-color: rgb(48, 133, 214);
+          }
+
+          &:last-child {
+            background-color: rgb(221, 51, 51);
+          }
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

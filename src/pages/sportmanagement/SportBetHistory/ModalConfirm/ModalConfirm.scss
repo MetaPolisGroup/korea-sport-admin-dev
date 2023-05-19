@@ -1,0 +1,44 @@
+.modal-confirm {
+  text-align: center;
+
+  svg {
+    font-size: 62px;
+    color: #87adbd;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: #595959;
+    font-size: 1.875em;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .box-btn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    & > button {
+      font-weight: 600;
+      cursor: pointer;
+      color: white !important;
+      border: unset;
+      border-radius: 4px;
+      opacity: 0.8;
+      padding: 10px 15px;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    & > button:first-child {
+      background-color: rgb(48, 133, 214);
+    }
+
+    & > button:last-child {
+      background-color: rgb(221, 51, 51);
+    }
+  }
+}

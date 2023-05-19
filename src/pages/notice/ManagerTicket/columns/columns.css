@@ -1,0 +1,30 @@
+.boxInput {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.boxInput input {
+  width: 100%;
+}
+
+.boxInput button {
+  width: 100%;
+}
+
+.boxInput .ant-space-item:first-child {
+  width: 80%;
+}
+
+.boxInput .ant-space-item:last-child {
+  width: 20%;
+}
+
+.boxInput .ant-form-item {
+  margin: 38px 0 0px;
+}
+
+.box-mes {
+  overflow-y: auto;
+  max-height: 60vh;
+  padding-right: 4px;
+}

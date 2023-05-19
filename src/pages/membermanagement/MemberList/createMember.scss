@@ -1,0 +1,40 @@
+.create-member {
+  .from-create-member {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+
+    .lable {
+      width: 20%;
+    }
+
+    & > div {
+      width: 80%;
+    }
+
+    .box-btn {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      width: 100%;
+
+      button {
+        cursor: pointer;
+        border: unset;
+        border-radius: 4px;
+        background-color: white;
+        padding: 4px 8px;
+      }
+
+      .submit {
+        opacity: 0.8;
+        color: white;
+        background-color: #707cd2;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

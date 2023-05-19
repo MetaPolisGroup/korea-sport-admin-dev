@@ -1,0 +1,25 @@
+.message-user {
+  display: flex;
+  & > div {
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    color: #fff;
+    background-color: #55657e;
+  }
+}
+
+.message-admin {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+
+  & > div {
+    color: #fff;
+    max-width: 80%;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: rgb(25, 118, 210);
+  }
+}

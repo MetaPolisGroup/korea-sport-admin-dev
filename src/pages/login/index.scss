@@ -1,0 +1,26 @@
+.wrapper-login-page {
+  height: 100vh;
+  display: flex;
+  background-image: linear-gradient(#2193b0, #6dd5ed);
+}
+
+.wrapper-login-page > .form-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.wrapper-login-page > .form-login > form {
+  background-color: #b7cddf;
+  padding: 30px 50px;
+  border-radius: 16px;
+  height: 360px;
+  width: 500px;
+}
+
+.wrapper-login-page > .form-login > form > h2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}

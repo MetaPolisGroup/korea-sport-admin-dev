@@ -1,0 +1,26 @@
+.item-div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid whitesmoke;
+  padding: 10px;
+  align-items: center;
+}
+
+.item-div > .ant-form-item {
+  padding: 0;
+  margin: 0;
+}
+.child > .ant-form-item {
+  padding: 0;
+  margin: 0;
+}
+
+.child {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.item-div:last-child {
+  border: none;
+}
